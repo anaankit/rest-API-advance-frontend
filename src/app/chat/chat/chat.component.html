@@ -1,0 +1,29 @@
+
+<div style="margin-top:5%" class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-4 col-sm-12 border-right">
+            <h3>List of Online ChatRooms</h3><br>
+
+            
+            <div id="list">
+
+            </div>
+            
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <p>
+            You can also create a chatRoom of you own here and can Also share it with others.
+            Enter the name of the chatBox and click on submit to get started.
+        </p>
+        
+        <div style="margin-top:15%; text-align: center">
+        <input [(ngModel)]='roomName' style="display:inline-block" type="name" class="form-control" id="inputBox" placeholder="Name here">
+        <a (click)="joinRoom()" href="/chatbox/{{roomName}}"  type="submit" style="display:inline-block; margin:3%" class="btn btn-primary">Submit</a>
+        </div>
+
+    </div>
+    </div>
+
+</div>

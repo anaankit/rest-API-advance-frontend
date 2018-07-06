@@ -1,0 +1,44 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-7 col-sm-0 back">
+
+    </div>
+
+    <div class="col-md-5 col-sm-12">
+
+      
+<div class="box"> 
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" [(ngModel)]='email' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" [(ngModel)]='password' id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <a type="submit" (click)='loginFunction()'  class="btn btn-primary button">Submit</a>
+  <div style="margin-top:10%"></div>
+  <div style="text-align: center">
+    <a class="badge badge-light" (click) = "forgot()" href="javascript:void(0)" >Forgot Passsword?</a>
+    <div style="text-align: center; padding: 5%" *ngIf = "resetBox" >
+      Enter email and the click on send , we will send you an password reset link to you Email.
+      <input type="email" class="form-control" [(ngModel)]='mailDetails.receiver' aria-describedby="emailHelp" placeholder="Enter email">
+      <br><button (click) = "sendMail()" class="btn btn-primary">Send</button>
+      <div style="text-align: center" *ngIf = "confirmation">
+        ...Might take upto a minute for the mail to be sent.
+      </div>
+    </div>
+</div>
+</div>
+  
+    </div>
+
+
+  </div>
+
+
+
+</div>

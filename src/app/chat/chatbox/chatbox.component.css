@@ -1,0 +1,56 @@
+.container{
+    margin-top:3%;
+}
+
+.textBox{
+bottom: 0;
+
+}
+
+
+.col-md-4{
+    height:100vh;
+}
+
+.col-md-12{
+
+    height:100vh;
+}
+
+.inputMessage {
+    border: 3px solid #000;
+    bottom: 0;
+    height: 10%;
+    /* left: 0; */
+    outline: none;
+    padding-left: 10px;
+    position: fixed;
+    /* right: 0; */
+    width: 55%;
+    /* margin-top:0 2% 0 2%; */
+}
+
+.spacer{
+    padding:12%;
+}
+
+.onlineList{
+    bottom:0;
+    position: fixed;
+}
+
+.right{
+    
+    margin:0 0 0 60%;
+}
+
+
+.Listbox{
+    height:10%;
+    width:80%;
+    background: black;
+    opacity: 0.5;
+    color:white;
+    text-align: center;
+
+}

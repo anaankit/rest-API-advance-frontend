@@ -1,0 +1,44 @@
+
+  
+<div id="container" class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-sm-0">
+      <div style="margin-top:30%"><b>Share this group via Email</b></div><br>
+      <div>
+        <input [(ngModel)]="mailReceiver" placeholder="Enter Email here" class="form-control" type="email">
+      </div><br>
+      <div style="text-align: center">
+      <button (click)="sendMail()" type="submit" class="btn btn-primary">Send</button>
+    </div>
+    <div style="text-align: center" *ngIf="sentConf == true"><b>...sending (This might takke upto a minute)</b></div>
+    
+    </div>
+    <div class="col-md-8 col-sm-12 border-right border-left">
+      <div *ngIf = "showEditBox == false" ><span style="font-size:20px" class="badge badge-light">ChatBox {{roomName}}
+        <small><a (click) = "setEditBox()"  href="javascript:void(0)">(Edit)</a></small>
+      </span><span class="right">
+        </span></div><br>
+        <div *ngIf = "showEditBox">
+          <input [(ngModel)]="editedRoomName" (keydown)="newRoomName($event)" class="form-control" placeholder="Enter new new Room Name">
+          <!-- Here -->
+        </div>
+      <div id="message-container">
+        <br>
+      </div>
+      <div style="text-align: right" *ngIf="typingB == true">
+          <div>{{Typer}} is Typing</div>
+          </div>
+      <br>
+      <div class="spacer"></div>
+
+      <input id="inputBox"  (keyup) = "check()"  (keydown)="message($event)" class="inputMessage form-control" [(ngModel)]= 'messageToSend' placeholder="Type here..."/> 
+
+    </div>
+    <div class="col-md-2 col-sm-0" style="text-align: center">
+      <a style="margin-top: 30%" (click)="killRoom()" class="badge badge-danger" href="http://localhost:4200/chat">delete this room</a>
+      <a style="margin-top: 30%" (click)="state()" class="badge badge-warning" href="javascript:void(0);">Mark as inactive</a>
+    </div>
+  </div>;
+  <div id="end"></div>
+</div>
+
