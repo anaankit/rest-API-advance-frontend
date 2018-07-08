@@ -87,13 +87,14 @@ public removeDuplicates(arr){
         
         for(let each of temp){
           
-          document.getElementById('list').innerHTML += `<a class="btn" data-toggle="collapse" href="#collapseExample${each}" role="button" aria-expanded="false" aria-controls="collapseExample${each}"
+          document.getElementById('list').innerHTML += `  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample${each}" role="button" aria-expanded="false" aria-controls="collapseExample${each}"
           style="height:10%;
           width:80%;
           background: black;
           opacity: 0.7;
           color:white;
           text-align: center;"  >${each}</a>
+
           <div style="height:10%;
           width:80%;
           background: black;
