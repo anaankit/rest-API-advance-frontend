@@ -28,7 +28,8 @@ export class ChatboxComponent implements OnInit {
   public roomName;
   public COLORS = ['#e6194b','#3cb44b','#ffe119',
   '#0082c8','#f58231','#911eb4','#46f0f0','#f032e6',
-  '#fabebe','#008080','#e6beff','#000000']
+  '#fabebe','#008080','#e6beff','#e6194b','#3cb44b','#ffe119',
+  '#0082c8','#f58231','#911eb4','#000000','#e6194b','#3cb44b','#ffe119']
  
 
   ngOnInit() {
@@ -216,6 +217,24 @@ export class ChatboxComponent implements OnInit {
         return this.COLORS[8];
         case 9:
         return this.COLORS[9];
+        case 10:
+        return this.COLORS[10];
+        case 11:
+        return this.COLORS[11];
+        case 12:
+        return this.COLORS[12];
+        case 13:
+        return this.COLORS[13]; 
+        case 14:
+        return this.COLORS[14];
+        case 15:
+        return this.COLORS[15];
+        case 16:
+        return this.COLORS[16];
+        case 17:
+        return this.COLORS[17];
+        case 18:
+        return this.COLORS[18];
         default:
         return this.COLORS[0]
       }
