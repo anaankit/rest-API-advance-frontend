@@ -36,7 +36,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
       // {path:'*',component:LoginComponent},
       // {path:'**',component:LoginComponent},
       {path:'chat',component:SignupComponent,pathMatch:'full'},
-      {path:'resetPasswords',component:PasswordResetComponent,pathMatch:'full'}
+      {path:'resetPasswords/:id',component:PasswordResetComponent,pathMatch:'full'}
     ])
     
   ],

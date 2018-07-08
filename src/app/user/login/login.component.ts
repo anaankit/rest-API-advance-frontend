@@ -3,6 +3,9 @@ import {Router} from '@angular/router';
 import { UserServiceService } from '../../user-service.service';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { SocketService } from '../../socket.service';
+import ShortUniqueId from 'short-unique-id';
+
+const shortid = require('shortid');
 
 @Component({
   selector: 'app-login',
@@ -61,16 +64,22 @@ export class LoginComponent implements OnInit {
     }
   } // end of login function
 
+
+
   public mailDetails = {
     receiver:'',
     subject:'Password reset Link',
-    text:'Here is your password reset Link http://localhost:4200/resetPasswords',
-    html:'<p>Here is your password reset Link http://localhost:4200/resetPasswords</p>',
+    text:'',
+    html:''
   }
   
   public confirmation:Boolean = false;
   public sendMail = () =>{
 
+    
+    let id = shortid.generate();
+    this.mailDetails.text = `Here is your password reset Link http://localhost:4200/resetPasswords/${id}`
+    this.mailDetails.html = `<p>Here is your password reset Link http://localhost:4200/resetPasswords/${id}</p>` 
     this.socketService.sendMail(this.mailDetails)
     this.confirmation = true;
 
@@ -81,5 +90,8 @@ export class LoginComponent implements OnInit {
   public forgot = () =>{
     this.resetBox =  true;
   }
+
+  
+
 
 }

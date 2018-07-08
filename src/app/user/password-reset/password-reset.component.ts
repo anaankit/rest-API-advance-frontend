@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../../user-service.service';
-import {Router} from '@angular/router'
+import {Router,ActivatedRoute} from '@angular/router'
+import { SocketService } from '../../socket.service';
+const shortid = require('shortid');
+
 
 @Component({
   selector: 'app-password-reset',
@@ -9,14 +12,24 @@ import {Router} from '@angular/router'
 })
 export class PasswordResetComponent implements OnInit {
 
-  constructor(public userService:UserServiceService,public router:Router) {
+  constructor(public _route : ActivatedRoute ,public socketService:SocketService,public userService:UserServiceService,public router:Router) {
 
 
    }
 
+   public id;
   ngOnInit() {
-  }
 
+  this.id = this._route.snapshot.paramMap.get('id');
+    console.log(this.id);
+    console.log(this.socketService.resetId);
+    
+    if(!shortid.isValid(this.id)){
+
+    alert('invalid, please try again ')
+    this.router.navigate(['/login'])
+  }
+  }
   public password;
   public email;
 

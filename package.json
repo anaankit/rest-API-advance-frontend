@@ -28,6 +28,8 @@
     "popper.js": "^1.14.3",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.1",
+    "short-unique-id": "^1.1.1",
+    "shortid": "^2.2.10",
     "socket.io": "^2.1.1",
     "zone.js": "^0.8.26"
   },

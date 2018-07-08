@@ -10,6 +10,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { HttpErrorResponse, HttpParams } from "@angular/common/http";
 
+var shortid = require('shortid');
+
 @Injectable({
   providedIn: 'root'
 })
@@ -53,6 +55,8 @@ export class SocketService {
     })
 
   } // end of authError
+
+
 
   public onlineRooms = () =>{
     
@@ -226,8 +230,11 @@ export class SocketService {
       this.socket.emit('editRoomName',data)
     }
 
+    public resetId = shortid.generate();
     public load:Boolean = false;
-    
+
+
+
 //db code
 public getChat = (roomName) =>{
   console.log()
