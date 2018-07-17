@@ -78,8 +78,8 @@ export class LoginComponent implements OnInit {
 
     
     let id = shortid.generate();
-    this.mailDetails.text = `Here is your password reset Link http://localhost:4200/resetPasswords/${id}`
-    this.mailDetails.html = `<p>Here is your password reset Link http://localhost:4200/resetPasswords/${id}</p>` 
+    this.mailDetails.text = `Here is your password reset Link http://advance-restapi-backend.ankit-here.xyz/resetPasswords/${id}`
+    this.mailDetails.html = `<p>Here is your password reset Link http://advance-restapi-backend.ankit-here.xyz/resetPasswords/${id}</p>` 
     this.socketService.sendMail(this.mailDetails)
     this.confirmation = true;
 

@@ -20,7 +20,7 @@ export class UserServiceService {
 
    } // end of constructor
    
-  private url = 'http://localhost:3000/api/v1/users'
+  private url = 'http://advance-restapi-backend.ankit-here.xyz/api/v1/users'
 
   public signup = (data):any => {
 
@@ -31,7 +31,7 @@ export class UserServiceService {
     .set('password',data.password)
     .set('mobileNumber',data.mobileNumber)
 
-    return this._http.post(`${this.url}/signup`,params);
+    return this._http.post(`http://advance-restapi-backend.ankit-here.xyz/api/v1/users/signup`,params);
 
   } // end of sign up
 
@@ -50,7 +50,7 @@ export class UserServiceService {
       
     let params =  new HttpParams()
     .set('password',data.password)
-    return this._http.post(`http://localhost:3000/api/v1/users/resetPassword/${data.email}`,params)
+    return this._http.post(`${this.url}/resetPassword/${data.email}`,params)
   } // end of change password
 
   

@@ -18,14 +18,14 @@ var shortid = require('shortid');
 
 export class SocketService {
 
-  public url = 'http://localhost:3000/'
+  public url = 'http://advance-restapi-backend.ankit-here.xyz/'
   public socket;
 
   constructor(public http:HttpClient) { 
 
     this.socket = io(this.url);
 
-
+    	
     
   } //  end of constructoer
 
@@ -238,7 +238,7 @@ export class SocketService {
 //db code
 public getChat = (roomName) =>{
   console.log()
-  return this.http.get(`http://localhost:3000/api/v1/getPreviousMessages?roomName=${roomName}`)
+  return this.http.get(`http://advance-restapi-backend.ankit-here.xyz/api/v1/getPreviousMessages?roomName=${roomName}`)
 
   
 }
